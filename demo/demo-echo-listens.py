@@ -23,6 +23,7 @@ tPhrase = 3
 # Boolean variable to track if spacebar is currently pressed
 spacebar_pressed = False
 
+detectKey = keyboard.Key.space
 
 # Function to recognize speech
 def recognizeSpeech():
@@ -45,7 +46,7 @@ def recognizeSpeech():
 # Function to handle key press event
 def on_press(key):
     global spacebar_pressed
-    if key == keyboard.Key.space and not spacebar_pressed:
+    if key == detectKey and not spacebar_pressed:
         print('Spacebar pressed')
         playsound(AUDIO_FILE_PATH_PRESS)
         # recognizeSpeech()
@@ -54,7 +55,7 @@ def on_press(key):
 # Function to handle key release event
 def on_release(key):
     global spacebar_pressed
-    if key == keyboard.Key.space:
+    if key == detectKey:
         print('Spacebar released')
         playsound(AUDIO_FILE_PATH_RELEASE)
         playsound(AUDIO_FILE_PATH_ACKNOWLEDGE)
