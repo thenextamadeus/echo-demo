@@ -12,8 +12,8 @@ client = OpenAI(api_key=apiKey)
 
 intent = "demo-echo.py is a demo day example of an extremely linear interaction with echo, WIZARD OF OZ PROTOTYPE"
 
-response_1 = "testing capabilites"
-FILENAME = ".demo-audio/echo-test.mp3"
+response_1 = "Hello ———— I am Echo —————— Your unit is now available for incoming calls. ——— I'll be listening for any updates."
+FILENAME = "./demo-audio/echo-introduction.mp3"
 
 # Initialize a counter
 counter = 1
